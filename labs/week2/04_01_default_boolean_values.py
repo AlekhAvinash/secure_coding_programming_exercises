@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Boolean Exercise_1
 # Let's check all the default boolean values of the types we know
 
