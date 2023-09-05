@@ -12,4 +12,23 @@
 #If the input is 5 print "Friday"
 #If the input is 6 print "Saturday"
 
-#Use if-else statements
+#Use if-else statements only
+
+num = int(input("Input number: "))
+if num >= 7 or num < 0:
+    print("Number must be less than 7 and greater than or equal to 0!!")
+else:
+    if num == 0:
+        print("Sunday")
+    if num == 1:
+        print("Monday")
+    if num == 2:
+        print("Tuesday")
+    if num == 3:
+        print("Wednesday")
+    if num == 4:
+        print("Thursday")
+    if num == 5:
+        print("Friday")
+    if num == 6:
+        print("Saturday")

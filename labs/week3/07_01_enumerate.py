@@ -9,3 +9,10 @@
 
 a_long_word = "the quick brown fox jumped over the lazy dog and then ran around and got very happy happy happy yes!"
 # the sum should be 1147 (you can check your code with this)
+
+ctr = 0
+for i, c in enumerate(a_long_word):
+    if c.lower() in "aeiou":
+        ctr += i
+
+print(f"The sum of all indices with vowels is: {ctr}")

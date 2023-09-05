@@ -8,3 +8,8 @@
 
 # you must use a while loop to do it
 
+ctr = 100
+while ctr:
+    ctr -= 1
+    print(f"there are {ctr} jars of payasam on the counter ...... now i ate one!")
+print("now I will go vomit....")

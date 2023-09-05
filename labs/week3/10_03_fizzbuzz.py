@@ -7,3 +7,8 @@
 
 # feel free to adjust n for debugging
 n = 100
+fz = "Fizz"
+bz = "Buzz"
+nt = ""
+for i in range(1, n+1):
+    print(f"{fz if i%3 else nt}{bz if i%5 else nt}")

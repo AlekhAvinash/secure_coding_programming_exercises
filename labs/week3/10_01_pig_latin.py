@@ -22,3 +22,17 @@ The greedy Monkey followed the Fox to the trap. As soon as he saw the meat he gr
 Shortly after that, another election among the Animals was held.
 """
 
+from string import ascii_lowercase as asl
+
+story = list(story)
+wrd = ""
+for c, i in enumerate(story):
+    if i.lower() not in asl:
+        if wrd:
+            print(wrd.lower(), "ay", sep='', end='')
+            wrd = ""
+        print(i, end="")
+    elif wrd:
+        print(i, end="")
+    else:
+        wrd = i
