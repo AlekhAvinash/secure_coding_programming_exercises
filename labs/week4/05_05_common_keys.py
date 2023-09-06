@@ -10,3 +10,17 @@
 dict_1 = {"a": 1, "b": 2, "c": 3}
 dict_2 = {"a": 2, "c": 4, "d": 2}
 
+unq = lambda a: list(set(a))
+
+def sum_merge(a: dict, b: dict) -> dict:
+    kys = unq(list(a.keys())+list(b.keys()))
+    out = {}
+    for i in kys:
+        out[i] = 0
+        if i in a:
+            out[i] += a[i]
+        if i in b:
+            out[i] += b[i]
+    return out
+
+print(sum_merge(dict_1, dict_2))

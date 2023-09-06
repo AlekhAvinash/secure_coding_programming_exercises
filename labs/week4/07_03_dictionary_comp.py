@@ -4,3 +4,6 @@
 
 # Use a comprehension to make this easy
 
+fn = lambda n: {i: pow(i, 2) for i in range(1, n+1)}
+
+print(fn(10))

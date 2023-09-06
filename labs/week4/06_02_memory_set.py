@@ -8,3 +8,29 @@
 # They win if they manage to create a set that has more than 10 items.
 
 # you will need the `input()` function to collect information from the user
+
+def collector():
+    while True:
+        try:
+            return int(input("Enter a number: "))
+        except:
+            print("Only integer inputs are accepted!")
+
+def game():
+    mem = set()
+    pts = 5
+    while len(mem)<=10:
+        inp = collector()
+        if inp in mem:
+            print("Used it!")
+            pts -= 1
+        else:
+            print("Good one!")
+            mem.add(inp)
+        
+        if not pts:
+            return "You lose.."
+    
+    return "Winner!!"
+
+print(game())

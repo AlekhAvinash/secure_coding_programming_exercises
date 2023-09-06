@@ -10,3 +10,13 @@
 #                   {'color_name': 'Yellow', 'color_code': '#FFFF00'}]
 
 # use a for-loop
+
+lst = [["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000", "#800000", "#FFFF00"]]
+
+def create(lst):
+    out = []
+    for i, j in zip(*lst):
+        out += [{'color_name': i, 'color_code': j}]
+    return out
+
+print(create(lst))

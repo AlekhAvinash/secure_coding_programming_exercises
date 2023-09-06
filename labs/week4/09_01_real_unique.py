@@ -6,3 +6,6 @@
 
 # NOTE - you make only keep purely unique values from the original list
 # i.e. if it appeared more than once in the first list, you have to remove it entirely.
+
+lst = [1, 2, 6, 55, 2, 'hi', 4, 6, 1, 13]
+print(list(filter(lambda a: lst.count(a) == 1, lst)))

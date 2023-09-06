@@ -1,11 +1,18 @@
 ### This code creates a random list for you to use
-import random
+from random import randint as rin
 
-list_length = random.randint(1, 20)
-randlist = list()
-for i in range(list_length):
-    randlist.append(random.randint(1, 100))
+randlent = rin(1, 20)
+randlist = [rin(1, 100) for i in range(randlent)]
 
+def pair_fnct(lst, lnt):
+    lst = sorted(lst)
+    if lnt%2:
+        lst += [0]
+        lnt += 1
+    return [(lst[i], lst[i+1]) for i in range(0, lnt, 2)]
+
+print(randlent, randlist)
+print(pair_fnct(randlist, randlent))
 
 # Write a script that takes randlist (a list of numbers) and:
 #     - sorts the numbers

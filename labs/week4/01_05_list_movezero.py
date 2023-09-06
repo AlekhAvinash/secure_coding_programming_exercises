@@ -8,3 +8,6 @@
 # Move all zero digits to end of the said list of numbers:
 
 # [3, 4, 6, 2, 6, 7, 6, 9, 10, 7, 4, 4, 5, 3, 2, 9, 7, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+lst = [3, 4, 0, 0, 0, 6, 2, 0, 6, 7, 6, 0, 0, 0, 9, 10, 7, 4, 4, 5, 3, 0, 0, 2, 9, 7, 1]
+print(sorted(lst, key = lambda a: a!=0, reverse=True))

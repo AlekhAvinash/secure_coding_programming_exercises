@@ -11,13 +11,11 @@ famous_quotes = [
     },
     {
         "full_name": "Emo Philips",
-        "quote": "A computer once beat me at chess, but it was no match for me at "
-        "kick boxing.",
+        "quote": "A computer once beat me at chess, but it was no match for me at kick boxing.",
     },
     {
         "full_name": "Edsger W. Dijkstra",
-        "quote": "Computer Science is no more about computers than astronomy "
-        "is about telescopes.",
+        "quote": "Computer Science is no more about computers than astronomy is about telescopes.",
     },
     {
         "full_name": "Bill Gates",
@@ -25,8 +23,7 @@ famous_quotes = [
     },
     {
         "full_name": "Norman Augustine",
-        "quote": "Software is like entropy: It is difficult to grasp, weighs nothing, "
-        "and obeys the Second Law of Thermodynamics; i.e., it always increases.",
+        "quote": "Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.",
     },
     {
         "full_name": "Nathan Myhrvold",
@@ -34,6 +31,9 @@ famous_quotes = [
     },
     {
         "full_name": "Alan Bennett",
-        "quote": "Standards are always out of date.  That’s what makes them standards.",
+        "quote": "Standards are always out of date.  That's what makes them standards.",
     },
 ]
+
+for i in famous_quotes:
+    print(f"{i['quote']} - {i['full_name'].split()[-1]}, {' '.join(i['full_name'].split()[:-1])}")
