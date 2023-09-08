@@ -1,7 +1,7 @@
 # recreate your previous generator from 01, but use a generator expression
 
-
-my_gen = ()  # fill out the code to make it work!
+ceil = lambda a: ((a+1)//2)*2
+my_gen = (i for i in range(ceil(1), 11))  # fill out the code to make it work!
 
 
 # practice using your generator
@@ -14,3 +14,5 @@ print()
 # does it work two times?
 for i in my_gen:
     print(i)
+
+print("It will not, next() of my_gen has reached null value.")

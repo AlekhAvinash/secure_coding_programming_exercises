@@ -4,18 +4,9 @@
 
 
 def list_of_even_nums(start, stop):
-    """
-    input:
-        start: int
-        stop: int
-    returns:
-        generator object
-
-    Your function should create a generator object that will
-    be the sequence of even numbers from start to stop
-    Make sure to use the yield keyword!
-    """
-
+    ceil = lambda a: ((a+1)//2)*2
+    for i in range(ceil(start), stop, 2):
+        yield i
 
 # use your generator
 for i in list_of_even_nums(2, 11):

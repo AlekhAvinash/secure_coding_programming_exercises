@@ -15,6 +15,10 @@ def find_first_divisible(list_of_nums, n):
     output: 3
     
     """
+    for i in list_of_nums:
+        if not i%n:
+            return i
+    return -1
 
     ## Use a for -loop to iterate over the input list
     ## check if the number is divisble by n with modulo

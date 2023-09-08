@@ -21,3 +21,14 @@ many_nests = ["a", ["bb", ["ccc", "ddd"], "ee", "ff"], "g", "h"]
 # should get back
 # ['a', 'bb', 'ccc', 'ddd', 'ee', 'ff', 'g', 'h']
 
+def flatten(lst):
+    out = []
+    for i in lst:
+        if type(i)==list:
+            out += flatten(i)
+        else:
+            out += [i]
+    return out
+
+print(flatten(hard_nested_list))
+print(flatten(many_nests))

@@ -8,8 +8,10 @@ def print_your_name_UPPER(name):
 
     This function Prints out the users name in all uppercase
     """
+    print(name.upper())
 
 
 # What happens when you run your function and attempt to return a variable?
 a = print_your_name_UPPER("lower case name")
 # what is a?
+print("None: This is because as default a function returns a void value.")

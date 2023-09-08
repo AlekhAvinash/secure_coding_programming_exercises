@@ -15,6 +15,7 @@ def lower_names(first_name, last_name):
     example input: GILAD GRESSEL
     output: gilad gressel
     """
+    return (first_name.lower(), last_name.lower())
 
 
 # what happens when you return multiple variables ?

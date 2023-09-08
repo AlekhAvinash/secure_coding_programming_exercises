@@ -28,7 +28,7 @@ print(check_for_vowels("The"))  # this should be False!
 # what is wrong?
 
 ## try printing list_of_vowels
-# print(list_of_vowels)
+print(list_of_vowels)
 # why is it empty?
-
+print("List objects are passes as references rather than as a copy into a function. So any changes done to a list in a function it is reflected in the global varible.")
 ## Fix the function so this does not happen!

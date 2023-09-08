@@ -1,12 +1,8 @@
 # write a function that takes no arguments
 
-
+nme = "Alekh"
 def no_args():
-    """
-    Do something here!
-    ideas: use a global
-    Idea: just print something out
-    """
+    print(f"Hello, World! I'm {nme}.")
 
-
+no_args()
 # call your function down here
