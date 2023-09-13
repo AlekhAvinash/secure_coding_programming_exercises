@@ -8,4 +8,4 @@ def h_fact(n):
         return n - 2 * h_fact(n - 1)
 
 
-h_fact(10)
+print(h_fact(10))

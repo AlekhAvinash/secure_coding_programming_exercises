@@ -14,3 +14,7 @@ Remember, your string needs to _grow_ with the *args - it needs infinite potenti
 
 """
 
+def msg(name: str, job: str, *obs: list[str]) -> str:
+    return f"Hello, {name}!! I heard your job of {job} allows you to own {', '.join(obs)}"
+
+print(msg("Alekh", "Violinist", "a violin", "finger guards", "spare strings", "and a lot more!!"))

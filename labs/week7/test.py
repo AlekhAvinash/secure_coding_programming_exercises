@@ -12,6 +12,8 @@
 # output: 6
 
 
+x = 10
+
 def sum_ints(*inp):
     out = 0
     for i in inp:
