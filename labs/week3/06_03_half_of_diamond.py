@@ -13,4 +13,5 @@
 *
 """
 
-print(*["* "*(5-abs(i)) for i in range(-4, 5)], sep='\n')
+val = int(input("Enter number: "))
+print(*["* "*(val-abs(i)) for i in range(-val+1, val)], sep='\n')

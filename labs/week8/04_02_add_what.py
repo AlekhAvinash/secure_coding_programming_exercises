@@ -13,3 +13,16 @@ dict + str
 
 Are all the exceptions the same?
 """
+
+def adder(a, b):
+    return a+b
+
+adder(1, 2)
+
+# adder(1, '2')
+# adder('1', [2])
+# adder((1, 2, 3), [2])
+# adder({1: 123}, {5: 3523})
+# adder({1: 123}, 'asd')
+
+print("All cases except the first raise a Type Error.")

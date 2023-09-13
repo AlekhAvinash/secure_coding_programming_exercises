@@ -10,3 +10,9 @@ if an error happens.
 The purpose of this exercise is to just practice observing that
 """
 
+try:
+    print(f"{4+'5'}")
+except TypeError as e:
+    print(f"Error: {e}")
+finally:
+    print(f"{4+int('5')}")
