@@ -8,3 +8,24 @@
 
 
 """
+
+from pathlib import Path
+from math import ceil
+
+ct = lambda a, b: ceil(a/b)*b
+
+def get():
+    with open("winnie_pooh.txt") as f:
+        return f.readlines()
+
+def main():
+    txt = get()
+    folder = Path('test/')
+    folder.mkdir(parents=True, exist_ok=True)
+
+    for i in range(0, ct(len(txt), 100), 100):
+        file = Path(f'{i//100}.txt')
+        file = folder/file
+        file.write_text(''.join(txt[i:i+100]), encoding='utf-8')
+
+main()

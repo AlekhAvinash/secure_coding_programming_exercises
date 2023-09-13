@@ -10,3 +10,19 @@ Path.glob(“*”)  returns a generator that you can use to iterate over all fil
 Path.iterdir()
 
 """
+
+from pathlib import Path
+import os
+
+print(Path.cwd())
+os.chdir("../")
+print(Path.cwd())
+cur = Path.cwd()
+
+print(os.listdir())
+
+print("Glob")
+print(*[i for i in Path.glob(cur, "*")], sep='\n')
+
+print("Iter")
+print(*[i for i in Path.iterdir(cur)], sep='\n')

@@ -8,3 +8,9 @@ CAUTION
 Use Path.rmdir() and Path.unlink() to delete a folder and file respectively
 
 """
+
+from pathlib import Path
+
+Path.unlink(Path("a.txt"))
+Path.unlink(Path("out/a.txt"))
+Path.rmdir(Path("out/"))
