@@ -33,3 +33,64 @@ vulnerable in daylight
 ## full moon monster
 only active in the full moon
 """
+
+class Monster:
+    time_of_day = 0
+    day_of_month = 0
+    full_moon = False
+    fctr = {"vampire": 5, "undead": 4, "werewolf": 3, "dargon": 2, "mummy": 1}
+    atks = {"slash": 1, "intimidate": 3, "poison": 5}
+
+    def __init__(self, name: str, limbs: int, atkMode: str, scrFctr: str, weaknes: str, lp: int):
+        self.name = name
+        self.limbs = limbs
+        self.atkMode = atkMode
+        self.scrFctr = scrFctr
+        self.weaknes = weaknes
+        self.lp = lp
+    
+    def attack(self, other):
+        dmg = 1
+        if other.weakness == self.scrFctr:
+            dmg += self.fctr[self.scrFctr]
+        
+        dmg += self.atks[self.atkMode]
+
+        dmg = other.defend(dmg)
+    
+    def sleep(self):
+        self.lp += 1
+    
+    def defend(self, dmg):
+        if self.limbs>2:
+            dmg -= 2
+        
+        self.lp -= dmg
+
+class NightMonster(Monster):
+    def __init__(self, name: str, limbs: int, atkMode: str, scrFctr: str, weaknes: str, lp: int):
+        super().__init__(name, limbs, atkMode, scrFctr, weaknes, lp)
+        self.check = lambda: (self.time_of_day + 6)%24 < 12
+
+    def attack(self):
+        super().attack()
+        if self.check():
+            self.lp += 2
+
+    def sleep(self):
+        super.sleep()
+        if self.check():
+            self.lp += 1            
+
+    def defend(self, dmg):
+        super().defend(dmg)
+        if self.check():
+            self.dmg += 2
+        else:
+            self.dmg -= 2
+
+class FullMoonMonster(NightMonster):
+    def __init__(self, name: str, limbs: int, atkMode: str, scrFctr: str, weaknes: str, lp: int):
+        super().__init__(name, limbs, atkMode, scrFctr, weaknes, lp)
+        if not self.full_moon:
+            self.lp = None
