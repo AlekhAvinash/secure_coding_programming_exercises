@@ -3,15 +3,15 @@ Log errors in the following function
 
 """
 
+import logging
 
 def add_em_up(*args):
     my_sum = 0
     for item in args:
         try:
-            sum += item
-        except TypeError:
-            pass
-            # do something here
+            my_sum += item
+        except TypeError as e:
+            logging.error(f" {e}")
     return my_sum
 
 
